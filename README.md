@@ -11,10 +11,14 @@ Requirements:
 1. You must first enable the Webhooks integration for your Slack Account to get the Token. You can enable it here: https://slack.com/services/new/incoming-webhook
 2. Slack.Webhooks depends on RestSharp
 
+Download:
+
+[Nuget](https://www.nuget.org/packages/Slack.Webhooks/)
+
 Then, create a SlackClient with your TeamName and Token
 
 ```csharp
-var slackClient = new SlackClient("[YOUR_WEBHOOK_URL]");
+var slackClient = new SlackClient("https://hooks.slack.com/services/[YOUR_WEBHOOK_URL]");
 ```
 
 Create a  new SlackMessage
