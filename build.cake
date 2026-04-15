@@ -143,17 +143,6 @@ Task("Test")
    .IsDependentOn("TestFramework")
    .IsDependentOn("TestCore");
 
-Task("TestFramework")
-   .IsDependentOn("Build")
-   .Does(() =>
-{
-   var testAssemblies = GetFiles($"./src/**/bin/{configuration}/net45/*.Tests.dll");
-   XUnit2(testAssemblies, new XUnit2Settings {
-         Parallelism = ParallelismOption.All,
-         NoAppDomain = true
-      });
-});
-
 Task("TestCore")
    .IsDependentOn("Build")
    .Does(() =>
