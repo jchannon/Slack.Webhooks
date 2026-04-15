@@ -155,7 +155,7 @@ Task("TestCore")
    DotNetCoreTest("./src/Slack.Webhooks.Tests/Slack.Webhooks.Tests.csproj", new DotNetCoreTestSettings 
       { 
          NoBuild = true, 
-         Framework = "netcoreapp2",
+         Framework = "net10.0",
          Configuration = configuration
       }, coverletSettings);
 });
