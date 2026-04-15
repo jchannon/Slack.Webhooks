@@ -140,7 +140,6 @@ Task("DeployNuGet")
 });
 
 Task("Test")
-   .IsDependentOn("TestFramework")
    .IsDependentOn("TestCore");
 
 Task("TestCore")
